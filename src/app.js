@@ -48,7 +48,11 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Rutas
 const authRoutes = require("./routes/auth.routes");
-app.use("/api/auth", authRoutes);
+const productRoutes = require('./routes/product.routes');
 
+app.use("/api/auth", authRoutes);
+app.use('/api/products', productRoutes);
+
+// Escuchando puerto de entrada
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
