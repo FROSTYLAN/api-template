@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
+const cors = require("cors");
 
 // Cargar variables de entorno
 dotenv.config();
@@ -10,6 +11,9 @@ const app = express();
 
 // Middleware para parsear JSON
 app.use(express.json());
+
+// Configurar CORS
+app.use(cors());
 
 // Configuración de la base de datos
 const sequelize = require('./utils/database.util');
