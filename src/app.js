@@ -38,7 +38,7 @@ const swaggerOptions = {
       version: "1.0.0",
       description: "API para manejar todos los procesos de cadena de suministro",
     },
-    servers: [{ url: "http://localhost:3000" }],
+    servers: [{ url: process.env.URL_API }],
   },
   apis: ["./src/routes/*.js"],
 };
