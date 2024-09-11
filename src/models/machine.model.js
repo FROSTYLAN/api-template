@@ -27,6 +27,10 @@ const Machine = sequelize.define('Machine', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  state: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  }
 });
 
 module.exports = Machine;
